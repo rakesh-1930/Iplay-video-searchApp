@@ -1,0 +1,32 @@
+@import "../../main.styles.scss";
+
+.search {
+  display: flex;
+  justify-content: center;
+
+  margin: 1em auto;
+  border-bottom: 1px solid $secondary-font-color;
+  padding: 1em;
+  .search-input {
+    display: grid;
+    align-self: flex-end;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 0 auto;
+    font-size: $normal-font;
+    border: none;
+    border-bottom: 1px solid $secondary-font-color;
+    outline: none;
+    &:focus {
+      border-bottom: 1px solid $primary-color;
+    }
+    &::placeholder {
+      opacity: 0.4;
+      font-size: $normal-font;
+    }
+  }
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,54 @@
+// === Variables Starts ==========
+
+// === colors Variable ============
+$color: 205;
+
+$primary-color: hsl($color, 84%, 45%);
+$dark-primary-color: hsl($color, 79%, 25%);
+$light-primary-color: hsl($color, 68%, 77%);
+$accent-color: #abe5;
+$dark-accent-color: #abe5;
+$light-accent-color: #abe5;
+$font-color: hsl($color, 0%, 40%);
+$secondary-font-color: hsl($color, 0%, 71%);
+$dark-font-color: hsl($color, 0%, 12%);
+$light-font-color: hsl($color, 0%, 100%);
+
+// === FONT Variable =========
+$logo-font: 2.5rem;
+$title-font: 1.25rem;
+$normal-font: 1rem;
+$subtitle-font: 0.75rem;
+$small-font: 0.6rem;
+
+// === Variables Ends ==========
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial;
+  font-size: 12px;
+}
+
+// === APP COMPONENTS CSS STARTS ============
+.app {
+  padding: 1em 5em;
+}
+.logo {
+  display: inline-block;
+  margin: 0.3em;
+  padding: 0.25em 1em;
+  font-size: $logo-font;
+  color: orangered;
+  text-shadow: 2px 2px 2px $secondary-font-color;
+  letter-spacing: 0.1em;
+}
+
+// === MEDIA Query =======
+
+@media (min-width: 500px) {
+  * {
+    font-size: 16px;
+  }
+}

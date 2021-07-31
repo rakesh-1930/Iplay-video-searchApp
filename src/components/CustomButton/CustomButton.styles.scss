@@ -1,0 +1,21 @@
+@import "../../main.styles.scss";
+
+.button-container {
+  margin: 0 1em;
+  .custom-button {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    color: $light-font-color;
+    background-color: $primary-color;
+    outline: none;
+    border: none;
+    font-size: $title-font;
+    padding: 0.5em 1em;
+    box-shadow: 2px 2px 5px $dark-primary-color;
+    &:hover {
+      background-color: $dark-primary-color;
+      box-shadow: 2px 2px 2px $dark-primary-color;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../main.styles.scss";
+
+.display-container {
+  margin: 1em;
+  .display-frame {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 56.6%;
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.display-title {
+  color: $font-color;
+  font-size: $normal-font;
+}
+.video-detail-description {
+  color: $secondary-font-color;
+  font-size: $subtitle-font;
+}
