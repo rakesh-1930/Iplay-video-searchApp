@@ -8,10 +8,14 @@ const DisplayPlayer = ({ selectedVideo }) => {
       <div key={selectedVideo.id.videoId} className="display-container">
         <div className="display-frame">
           <iframe
-            width="640"
-            height="360"
-            title={selectedVideo.snippet.title}
+            width="560"
+            height="315"
             src={displayVideo}
+            title={selectedVideo.snippet.title}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
           />
         </div>
         <div className="video-detail">

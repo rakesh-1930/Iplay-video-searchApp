@@ -20,6 +20,7 @@ class App extends React.Component {
       },
     });
     this.setState({ videos: response.data.items });
+    this.setState({ selectedVideo: response.data.items[0] });
   };
 
   render() {
@@ -28,6 +29,7 @@ class App extends React.Component {
         <h1 className="logo">IpLay</h1>
         <SearchBar onSearch={this.onSearch} />
         <DisplayPlayer selectedVideo={this.state.selectedVideo} />
+
         <VideoList
           onVideoSelect={this.onVideoSelect}
           className="video-list-container"
