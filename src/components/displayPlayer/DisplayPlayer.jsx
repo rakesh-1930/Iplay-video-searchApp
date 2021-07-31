@@ -23,7 +23,14 @@ const DisplayPlayer = ({ selectedVideo }) => {
       </div>
     );
   } else {
-    return <div>Loading</div>;
+    return (
+      <div className="loading">
+        <h1> Hello There</h1>
+        <br />
+        <br />
+        <p> Search your videos</p>
+      </div>
+    );
   }
 };
 export default DisplayPlayer;

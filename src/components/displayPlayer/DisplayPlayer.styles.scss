@@ -4,7 +4,7 @@
   margin: 1em;
   .display-frame {
     position: relative;
-    height: 100vh;
+    height: 0;
     overflow: hidden;
     padding-bottom: 56.6%;
     iframe {
@@ -21,4 +21,19 @@
 .video-detail-description {
   color: $secondary-font-color;
   font-size: $subtitle-font;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  justify-content: center;
+  h1,
+  p {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: $title-font;
+  }
 }
