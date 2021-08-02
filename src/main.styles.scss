@@ -29,6 +29,7 @@ $small-font: 0.6rem;
   box-sizing: border-box;
   font-family: Helvetica, Arial;
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 // === APP COMPONENTS CSS STARTS ============
@@ -53,8 +54,5 @@ $small-font: 0.6rem;
   }
   .video-container {
     position: relative;
-
-    .card-container {
-    }
   }
 }

@@ -7,24 +7,31 @@ const DisplayCard = (video) => {
   const onCardClick = () => {
     video.onVideoSelect(video);
   };
+  const time = moment(video.snippet.publishedAt)._d;
+  // const videoDate = time._d
+  console.log(moment().from(time, true));
 
   return (
-    <div className="card-main-container">
-      <div
-        key={video.id.videoId}
-        className="card-container"
-        onClick={onCardClick}
-      >
-        <img src={video.snippet.thumbnails.medium.url} alt="thumbnail" />
-        <div className="card-detail">
-          <h4 className="card-title">{video.snippet.title}</h4>
-          <p className="card-description">{video.snippet.description} </p>
-          <p className="card-description">
-            {() => moment().from(video.snippet.publishedAt)}
-          </p>
+    <a className="card-anchor" href="#player">
+      <div className="card-main-container">
+        <div
+          key={video.id.videoId}
+          className="card-container"
+          onClick={onCardClick}
+        >
+          <img src={video.snippet.thumbnails.medium.url} alt="thumbnail" />
+          <div className="card-detail">
+            <h4 className="card-title">{video.snippet.title}</h4>
+            <p className="card-description">{video.snippet.description} </p>
+            <h4 className="card-description">
+              Channel : {video.snippet.channelTitle}
+            </h4>
+
+            <p className="card-description">{moment().from(time, true)} ago</p>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
