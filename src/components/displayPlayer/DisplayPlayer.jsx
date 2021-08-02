@@ -1,5 +1,6 @@
 import React from "react";
 import "./DisplayPlayer.styles.scss";
+import ReactPlayer from "react-player";
 
 const DisplayPlayer = ({ selectedVideo }) => {
   if (selectedVideo) {
@@ -7,22 +8,16 @@ const DisplayPlayer = ({ selectedVideo }) => {
     return (
       <div key={selectedVideo.id.videoId} className="display-container">
         <div className="display-frame">
-          <iframe
-            width="560"
-            height="315"
-            src={displayVideo}
-            title={selectedVideo.snippet.title}
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          />
+          <ReactPlayer width="560" height="315" url={displayVideo} controls />
         </div>
         <div className="video-detail">
           <h3 className="display-title">{selectedVideo.snippet.title}</h3>
           <p className="video-detail-description">
             {selectedVideo.snippet.description}
           </p>
+          <h4 className="video-detail-description">
+            Channel : {selectedVideo.snippet.channelTitle}
+          </h4>
         </div>
       </div>
     );
