@@ -16,7 +16,7 @@ class App extends React.Component {
   onSearch = async (text) => {
     const response = await youtube.get("/search", {
       params: {
-        q: text,
+        q: text === "" ? "forest" : text,
       },
     });
     this.setState({ videos: response.data.items });
@@ -26,15 +26,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1 className="logo">IpLay</h1>
         <SearchBar onSearch={this.onSearch} />
-        <DisplayPlayer selectedVideo={this.state.selectedVideo} />
+        <div className="video-player">
+          <DisplayPlayer selectedVideo={this.state.selectedVideo} />
 
-        <VideoList
-          onVideoSelect={this.onVideoSelect}
-          className="video-list-container"
-          videos={this.state.videos}
-        />
+          <VideoList
+            onVideoSelect={this.onVideoSelect}
+            className="video-list-container"
+            videos={this.state.videos}
+          />
+        </div>
       </div>
     );
   }

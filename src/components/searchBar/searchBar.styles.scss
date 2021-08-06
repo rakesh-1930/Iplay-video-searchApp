@@ -1,27 +1,28 @@
 @import "../../main.styles.scss";
 
 .search {
-  display: flex;
-  justify-content: center;
-
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   margin: 1em auto;
+
   border-bottom: 1px solid $secondary-font-color;
-  padding: 1em;
+
   .search-input {
-    display: grid;
+    width: 60vw;
+    display: flex;
     align-self: flex-end;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    margin: 0 auto;
-    font-size: $normal-font;
-    border: none;
-    border-bottom: 1px solid $secondary-font-color;
+    margin: 1em auto;
+    font-size: $title-font;
+    padding: 0.5em 0.4em;
+    border: 1px solid $secondary-font-color;
     outline: none;
     &:focus {
-      border-bottom: 1px solid $primary-color;
+      border: 1px solid $primary-color;
     }
     &::placeholder {
       opacity: 0.4;
-      font-size: $normal-font;
+      font-size: $title-font;
     }
   }
 }

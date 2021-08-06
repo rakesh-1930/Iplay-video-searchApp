@@ -1,3 +1,6 @@
+// @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap");
+
 // === Variables Starts ==========
 
 // === colors Variable ============
@@ -28,31 +31,56 @@ $small-font: 0.6rem;
   padding: 0;
   box-sizing: border-box;
   font-family: Helvetica, Arial;
-  font-size: 12px;
+  font-size: 11px;
   scroll-behavior: smooth;
 }
 
 // === APP COMPONENTS CSS STARTS ============
-.app {
-  padding: 1em 5em;
-}
+// .app {
+//   padding: 1em 5em;
+// }
 .logo {
   display: inline-block;
   margin: 0.3em;
   padding: 0.25em 1em;
   font-size: $logo-font;
-  color: orangered;
+  color: rgb(255, 0, 0);
+  font-family: "Abril Fatface", cursive;
   text-shadow: 2px 2px 2px $secondary-font-color;
   letter-spacing: 0.1em;
 }
 
 // === MEDIA Query =======
 
-@media (min-width: 500px) {
+@media (min-width: 650px) {
   * {
     font-size: 16px;
+  }
+  .app {
+    margin: 0 auto;
   }
   .video-container {
     position: relative;
   }
+  .search {
+    display: flex;
+    justify-content: center;
+  }
+  .video-player {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .display-container {
+      width: 65%;
+    }
+    .video-container {
+      width: 25%;
+    }
+  }
 }
+
+// @media (min-width: 900px) {
+//   * {
+//     font-size: 13px;
+//   }
+// }

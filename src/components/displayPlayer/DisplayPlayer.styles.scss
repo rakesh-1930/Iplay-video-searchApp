@@ -18,22 +18,21 @@
   }
 }
 .display-title {
-  padding-left: 0.3em;
-  color: $font-color;
+  padding: 0.7em;
+  color: $light-font-color;
   font-size: $normal-font;
 }
 .video-detail-description {
-  padding-left: 0.3em;
-  color: $secondary-font-color;
+  padding: 0.7em;
+  color: $font-color;
   font-size: $subtitle-font;
   margin: 0.5em 0;
-  padding-bottom: 0.3em;
 }
 
 .loading {
   display: flex;
   flex-direction: column;
-  margin: 2em 0;
+  margin: 2em auto;
   justify-content: center;
   h1,
   p {
