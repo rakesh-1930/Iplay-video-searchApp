@@ -1,10 +1,16 @@
 @import "../../main.styles.scss";
 
 .search {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $light-font-color;
+  z-index: 5;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  margin: 1em auto;
+  margin: 0 auto;
+  height: 120px;
 
   border-bottom: 1px solid $secondary-font-color;
 

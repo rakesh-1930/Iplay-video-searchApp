@@ -6,11 +6,7 @@ const DisplayPlayer = ({ selectedVideo }) => {
   if (selectedVideo) {
     const displayVideo = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`;
     return (
-      <div
-        key={selectedVideo.id.videoId}
-        className="display-container"
-        id="player"
-      >
+      <div key={selectedVideo.id.videoId} className="display-container">
         <div className="display-frame">
           <ReactPlayer width="560" height="315" url={displayVideo} controls />
         </div>

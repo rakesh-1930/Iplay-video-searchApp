@@ -27,7 +27,9 @@ const DisplayCard = (video) => {
               Channel : {video.snippet.channelTitle}
             </h4>
 
-            <p className="card-description">{moment().from(time, true)} ago</p>
+            <p className="card-description">
+              Uploaded: {moment().from(time, true)} ago
+            </p>
           </div>
         </div>
       </div>

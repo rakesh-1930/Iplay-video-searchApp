@@ -27,6 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <SearchBar onSearch={this.onSearch} />
+        <div id="player"></div>
         <div className="video-player">
           <DisplayPlayer selectedVideo={this.state.selectedVideo} />
 
